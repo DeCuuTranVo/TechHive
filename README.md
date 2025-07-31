@@ -37,9 +37,7 @@ The UserManagementAPI is a production-ready web application developed for TechHi
 - **JWT Bearer Authentication**: Secure token validation and user context management
 - **Swagger/OpenAPI**: Interactive API documentation with authentication support
 
-### Project Structure
-```
-UserManagementAPI/
+### Project StructureUserManagementAPI/
 ??? Controllers/          # API controllers (User, Auth, Test)
 ??? Middleware/          # Custom middleware components
 ??? Services/           # Business logic and validation services
@@ -52,8 +50,6 @@ UserManagementAPI_Testing/
 ??? Unit/             # Unit tests for controllers and services
 ??? Integration/      # Integration tests for middleware pipeline
 ??? Infrastructure/   # Test utilities and helper classes
-```
-
 ## ?? API Endpoints
 
 ### Authentication Endpoints (Public)
@@ -73,7 +69,7 @@ UserManagementAPI_Testing/
 - `GET /swagger` - Interactive API documentation
 - `GET /health` - Application health check
 
-## ?? Getting Started
+## ??? Getting Started
 
 ### Prerequisites
 - .NET 8 SDK
@@ -82,58 +78,34 @@ UserManagementAPI_Testing/
 
 ### Installation & Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone [repository-url]
-   cd TechHive
-   ```
-
-2. **Configure database connection**
-   ```json
-   // appsettings.json
-   {
-     "ConnectionStrings": {
-       "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=UserManagementAPI;Trusted_Connection=true"
-     }
+1. **Clone the repository**git clone [repository-url]
+cd TechHive
+2. **Configure database connection**// appsettings.json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=UserManagementAPI;Trusted_Connection=true"
+  }
    }
-   ```
-
-3. **Configure JWT settings**
-   ```json
-   // appsettings.json
-   {
-     "Jwt": {
-       "Key": "YourSuperSecretKeyThatIsAtLeast32CharactersLong!",
-       "Issuer": "UserManagementAPI",
-       "Audience": "UserManagementAPI"
-     }
-   }
-   ```
-
-4. **Run database migrations**
-   ```bash
-   dotnet ef database update --project UserManagementAPI
-   ```
-
-5. **Start the application**
-   ```bash
-   dotnet run --project UserManagementAPI
-   ```
-
+3. **Configure JWT settings**// appsettings.json
+{
+  "Jwt": {
+    "Key": "YourSuperSecretKeyThatIsAtLeast32CharactersLong!",
+    "Issuer": "UserManagementAPI",
+    "Audience": "UserManagementAPI"
+  }
+}
+4. **Run database migrations**dotnet ef database update --project UserManagementAPI
+5. **Start the application**dotnet run --project UserManagementAPI
 6. **Access the API**
    - API: `https://localhost:5001`
    - Swagger UI: `https://localhost:5001/swagger`
 
-### Running Tests
-```bash
-# Run all tests
+### Running Tests# Run all tests
 dotnet test
 
 # Run specific test category
 dotnet test --filter "Category=Integration"
 dotnet test --filter "Category=Unit"
-```
-
 ## ?? Development Journey
 
 This project was developed through three progressive activities, each demonstrating different aspects of modern API development with Microsoft Copilot assistance:
@@ -156,7 +128,7 @@ This project was developed through three progressive activities, each demonstrat
 - **Key Features**: Request/response logging, global exception handling, security middleware
 - **Copilot Impact**: Middleware architecture guidance, security best practices, integration testing strategies
 
-## ??? Security Features
+## ?? Security Features
 
 ### Authentication & Authorization
 - **JWT Token Validation**: Comprehensive token verification including signature, issuer, audience, and expiration
@@ -197,7 +169,7 @@ This project was developed through three progressive activities, each demonstrat
 - **Concurrent Request Testing**: Multi-threaded request validation with unique request IDs
 - **Security Header Filtering**: Validation of sensitive data protection in logs
 
-## ?? Performance Characteristics
+## ? Performance Characteristics
 
 ### Scalability Features
 - **Pagination**: Efficient database queries limiting memory usage from O(n) to O(page_size)
